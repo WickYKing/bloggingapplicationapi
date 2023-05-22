@@ -13,6 +13,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 public class PostDto {
+     private Integer postId;
      @NotEmpty
      @Size(min = 3,max = 100,message = "Please Enter Your Title")
 

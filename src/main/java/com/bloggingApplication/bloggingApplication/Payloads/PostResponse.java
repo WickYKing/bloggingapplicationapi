@@ -1,2 +1,23 @@
-package com.bloggingApplication.bloggingApplication.Payloads;public class PostResponse {
+package com.bloggingApplication.bloggingApplication.Payloads;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
+@NoArgsConstructor
+@Setter
+@Getter
+@AllArgsConstructor
+public class PostResponse {
+
+
+    private List<PostDto> content;
+    private Integer pageNumber;
+    private Integer pageSize;
+    private Long totalElement;
+    private Integer totalPage;
+    private boolean lastPage;
+
 }

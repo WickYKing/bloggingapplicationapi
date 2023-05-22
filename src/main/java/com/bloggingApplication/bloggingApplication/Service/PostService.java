@@ -1,6 +1,7 @@
 package com.bloggingApplication.bloggingApplication.Service;
 
 import com.bloggingApplication.bloggingApplication.Payloads.PostDto;
+import com.bloggingApplication.bloggingApplication.Payloads.PostResponse;
 
 import java.util.List;
 
@@ -14,12 +15,13 @@ public interface PostService {
     // getByPostId
     PostDto getAllByPostId(Integer postId);
     //get All Post
-   List<PostDto> getAllPost(Integer pageNumber, Integer pageSize);
+    PostResponse getAllPost(Integer pageNumber, Integer pageSize,String sortBy,String sortDirc);
   //  List<PostDto> getAllPost();
     // get ALl Post By CategoryId
-    List<PostDto> getPostByCategory(Integer categoryId);
+    PostResponse getPostByCategory(Integer categoryId, Integer pageNumber, Integer pageSize,String sortBy,String sortDirc);
     // get All Post By UserID
-    List<PostDto> getPostByUserId(Integer userId);
+    PostResponse getPostByUserId(Integer userId, Integer pageNumber, Integer pageSize,String sortBy,String sortDirc);
     // search with Keyword
-    List<PostDto> searchPost(String keyword);
+    List<PostDto> searchKeyword(String keywords);
+
 }
